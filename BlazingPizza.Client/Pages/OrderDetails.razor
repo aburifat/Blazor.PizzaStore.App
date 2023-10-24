@@ -1,8 +1,9 @@
 ﻿@page "/myorders/{orderId:int}"
-
 @using System.Threading
 @inject HttpClient HttpClient
 @implements IDisposable
+
+<PageTitle>Blazing Pizza - Order Details</PageTitle>
 
 <div class="main">
     @if (invalidOrder)
@@ -10,7 +11,7 @@
         <h2>Nope</h2>
         <p>Sorry, this order could not be loaded.</p>
     }
-    else if(orderWithStatus == null)
+    else if (orderWithStatus == null)
     {
         <text>Loading...</text>
     }
@@ -43,7 +44,10 @@
 
     protected override void OnParametersSet()
     {
+        // If we were already polling for a different order, stop doing so
         pollingCancellationToken?.Cancel();
+
+        // Start a new poll loop
         PollForUpdates();
     }
 

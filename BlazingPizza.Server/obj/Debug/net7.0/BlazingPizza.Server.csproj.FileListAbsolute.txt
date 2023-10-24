@@ -51,11 +51,13 @@ D:\Projects\Blazor.PizzaStore.App\BlazingPizza.Server\bin\Debug\net7.0\Microsoft
 D:\Projects\Blazor.PizzaStore.App\BlazingPizza.Server\bin\Debug\net7.0\Mono.TextTemplating.dll
 D:\Projects\Blazor.PizzaStore.App\BlazingPizza.Server\bin\Debug\net7.0\Newtonsoft.Json.dll
 D:\Projects\Blazor.PizzaStore.App\BlazingPizza.Server\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
+D:\Projects\Blazor.PizzaStore.App\BlazingPizza.Server\bin\Debug\net7.0\BouncyCastle.Crypto.dll
 D:\Projects\Blazor.PizzaStore.App\BlazingPizza.Server\bin\Debug\net7.0\SQLitePCLRaw.batteries_v2.dll
 D:\Projects\Blazor.PizzaStore.App\BlazingPizza.Server\bin\Debug\net7.0\SQLitePCLRaw.core.dll
 D:\Projects\Blazor.PizzaStore.App\BlazingPizza.Server\bin\Debug\net7.0\SQLitePCLRaw.provider.e_sqlite3.dll
 D:\Projects\Blazor.PizzaStore.App\BlazingPizza.Server\bin\Debug\net7.0\System.CodeDom.dll
 D:\Projects\Blazor.PizzaStore.App\BlazingPizza.Server\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Projects\Blazor.PizzaStore.App\BlazingPizza.Server\bin\Debug\net7.0\WebPush.dll
 D:\Projects\Blazor.PizzaStore.App\BlazingPizza.Server\bin\Debug\net7.0\runtimes\alpine-arm\native\libe_sqlite3.so
 D:\Projects\Blazor.PizzaStore.App\BlazingPizza.Server\bin\Debug\net7.0\runtimes\alpine-arm64\native\libe_sqlite3.so
 D:\Projects\Blazor.PizzaStore.App\BlazingPizza.Server\bin\Debug\net7.0\runtimes\alpine-x64\native\libe_sqlite3.so

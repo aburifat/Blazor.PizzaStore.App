@@ -24,10 +24,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hlY2tvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Blazor.PizzaStore.App/BlazingPizza.Client/Pages/ConfiguredPizzaItem.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29uZmlndXJlZFBpenphSXRlbS5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/Projects/Blazor.PizzaStore.App/BlazingPizza.Client/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -42,6 +38,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Projects/Blazor.PizzaStore.App/BlazingPizza.Client/Shared/AddressEditor.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEFkZHJlc3NFZGl0b3IucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/Blazor.PizzaStore.App/BlazingPizza.Client/Shared/ConfiguredPizzaItem.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENvbmZpZ3VyZWRQaXp6YUl0ZW0ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Projects/Blazor.PizzaStore.App/BlazingPizza.Client/Shared/ConfigurePizzaDialog.razor]

@@ -7,39 +7,39 @@
             @Pizza.Special.Description
         </div>
         <form class="dialog-body">
-
-            <label>Size:</label>
-            <input type="range" min="@Pizza.MinimumSize" max="@Pizza.MaximumSize" step="1" @bind="Pizza.Size" @bind:event="oninput" />
-            <span class="size-label">
-                @(Pizza.Size)" (£@(Pizza.GetFormattedTotalPrice()))
-            </span>
-
+            <div>
+                <label>Size:</label>
+                <input type="range" min="@Pizza.MinimumSize" max="@Pizza.MaximumSize" step="1" @bind="Pizza.Size" @bind:event="oninput" />
+                <span class="size-label">
+                    @(Pizza.Size)" (£@(Pizza.GetFormattedTotalPrice()))
+                </span>
+            </div>
             <div>
                 <label>Extra Toppings:</label>
-                @if(toppings == null)
+                @if (toppings == null)
                 {
                     <select class="custom-select" disabled>
-                        <option>Loading...</option>
+                        <option>(loading...)</option>
                     </select>
                 }
-                else if(Pizza.Toppings.Count >= 6)
+                else if (Pizza.Toppings.Count >= 6)
                 {
-                    <div>(Maximum Reached)</div>
+                    <div>(maximum reached)</div>
                 }
                 else
                 {
                     <select class="custom-select" @onchange="ToppingSelected">
-                        <option value="-1" disabled selected>(Select)</option>
-                        @for(var i = 0; i < toppings.Count; i++)
+                        <option value="-1" disabled selected>(select)</option>
+                        @for (var i = 0; i < toppings.Count; i++)
                         {
-                            <option value="@i">@toppings[i].Name - (£@toppings[i].GetFormattedPrice())</option>
+                            <option value="@i">@toppings[i].Name - (£@(toppings[i].GetFormattedPrice()))</option>
                         }
                     </select>
                 }
             </div>
 
             <div class="toppings">
-                @foreach(var topping in Pizza.Toppings)
+                @foreach (var topping in Pizza.Toppings)
                 {
                     <div class="topping">
                         @topping.Topping.Name
@@ -49,12 +49,13 @@
                 }
             </div>
         </form>
+
         <div class="dialog-buttons">
             <button class="btn btn-secondary mr-auto" @onclick="OnCancel">Cancel</button>
             <span class="mr-center">
                 Price: <span class="price">@(Pizza.GetFormattedTotalPrice())</span>
             </span>
-            <button class="btn btn-success ml-auto" @onclick="OnConfirm">Order</button>
+            <button class="btn btn-success ml-auto" @onclick="OnConfirm">Order ></button>
         </div>
     </div>
 </div>
@@ -66,14 +67,14 @@
     [Parameter] public EventCallback OnCancel { get; set; }
     [Parameter] public EventCallback OnConfirm { get; set; }
 
-    protected override async Task OnInitializedAsync()
+    protected async override Task OnInitializedAsync()
     {
         toppings = await HttpClient.GetFromJsonAsync<List<Topping>>("toppings");
     }
 
     void ToppingSelected(ChangeEventArgs e)
     {
-        if(int.TryParse((string)e.Value, out var index) && index >= 0)
+        if (int.TryParse((string)e.Value, out var index) && index >= 0)
         {
             AddTopping(toppings[index]);
         }
@@ -81,7 +82,7 @@
 
     void AddTopping(Topping topping)
     {
-        if(Pizza.Toppings.Find(pt => pt.Topping == topping) == null)
+        if (Pizza.Toppings.Find(pt => pt.Topping == topping) == null)
         {
             Pizza.Toppings.Add(new PizzaTopping() { Topping = topping });
         }
